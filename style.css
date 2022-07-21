@@ -15,12 +15,17 @@ body{
 }
 
 .select-bg{
-    background-color: rgb(249, 211, 217);
-    /* TODO add box shadow */
+    background-color: rgb(250, 235, 237);
+    border-radius: .75em;
+    box-shadow: 0 1px 5px black;
+    color: rgb(210, 150, 160);
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-size: 17px;
+    text-shadow: .5px .5px .5px black;
 }
 
 .select-item img{
-    height: 15em;
+    height: 8em;
     width: 100%;
     object-fit: cover;
     object-position: center;

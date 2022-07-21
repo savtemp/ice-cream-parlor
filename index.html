@@ -34,33 +34,46 @@
 
   </head>
 
+<!-- TODO do special style in CSS add to index -->
+
   <body class="debug">
     <main class="container-fluid">
         <div class="row">
             <!-- SECTION Cart Area -->
             <div class="col-md-5">
-                <div class="row bg-white">
+                <div class="row bg-white text-primary p-1 mx-3 mt-5 mb-0">
                     <div class="col-6">
-                        <p>Name</p>
+                        <p class="mb-0 p-2"><b>Name</b></p>
+                    </div>
+                    <!-- <div class="col-2 text-center">
+                        <p class="mb-0 p-2"><b>Qty</b></p>
+                    </div> -->
+                    <div class="col-6 text-center">
+                        <p class="mb-0 p-2"><b>Each</b></p>
+                    </div>
+                    <!-- <div class="col-2 text-center">
+                        <p class="mb-0 p-2"><b>Total</b></p>
+                    </div> -->
+                </div>
+                <div id="order-items" class="row bg-white row-style mx-3 mt-0 mb-0">
+                    <!-- Order Inject -->
+                    <!-- TODO make inject from top down and have the column stay the same size -->
+                    <!-- TODO also create matching columns for Qty and Total -->
+                    <!-- <div class="col-6">
+                        <p>Strawberry</p>
                     </div>
                     <div class="col-2">
-                        <p>Qty</p>
+                        <p>2</p>
                     </div>
                     <div class="col-2">
-                        <p>Each</p>
+                        <p>$2.00</p>
                     </div>
                     <div class="col-2">
                         <p>Total</p>
-                    </div>
-                </div>
-                <div id="order-items" class="row bg-white row-style">
-                    <!-- Order Inject -->
-                    <!-- <div class="col-12">
-                        <p><span>Strawberry</span> - <span>$2.00</span></p>
                     </div> -->
                 </div>
-                <div class="row bg-white text-end">
-                    <div class="col-12 p-3"><b>Total: $<span id="total"></span></b></div>
+                <div class="row bg-white text-end mx-3 mt-0">
+                    <div class="col-12 p-3">TOTAL: $<b><span class="text-primary" id="total"></span></b></div>
                     <div class="col-12 p-3">
                         <button class="btn btn-primary" onclick="pay()">Pay</button>
                     </div>
@@ -69,13 +82,14 @@
             <!-- SECTION Selection Area -->
             <div class="col-md-7">
                 <div class="row">
-                    <div class="col-12 p-2 mx-2">
-                        <h1 class="font-style">Toppings</h1>
+                    <div class="col-12 p-2 mx-2 mt-5">
+                        <h1 class="font-style"><u>Toppings</u></h1>
                     </div>
                 </div>
-                <div id="toppings" class="row justify-content-evenly">
+                <!-- TODO reshape boxes -->
+                <div id="toppings" class="row justify-content-around">
                     <!-- Toppings Inject -->
-                    <!-- <div class="col-4 bg-white text-center p-3">
+                    <!-- <div class="col-4 bg-white text-center p-1">
                         <img class="img-fluid" 
                         src="https://images.unsplash.com/photo-1516746924755-babd21844370?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3ByaW5rbGVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" 
                         alt="">
@@ -83,20 +97,20 @@
                     </div> -->
                 </div>
                 <div class="row">
-                    <div class="col-12 p-2 mx-2">
-                        <h1 class="font-style">Vessels</h1>
+                    <div class="col-12 p-2 mx-2 mt-3">
+                        <h1 class="font-style"><u>Vessels</u></h1>
                     </div>
                 </div>
-                <div id="vessels" class="row justify-content-evenly">
+                <div id="vessels" class="row justify-content-around">
                     <!-- Vessels Inject -->
                     <!-- <div class="col-4">Vessels</div> -->
                 </div>
                 <div class="row">
-                    <div class="col-12 p-2 mx-2">
-                        <h1 class="font-style">Ice Creams</h1>
+                    <div class="col-12 p-2 mx-2 mt-3">
+                        <h1 class="font-style"><u>Ice Creams</u></h1>
                     </div>
                 </div>
-                <div id="iceCreams" class="row justify-content-evenly">
+                <div id="iceCreams" class="row justify-content-around">
                     <!-- Ice Creams Inject -->
                     <!-- <div class="col-4">Ice Cream</div> -->
                 </div>

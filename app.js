@@ -20,6 +20,10 @@ const vessels = [{
     name: 'Waffle Bowl',
     image: 'http://images.wbmason.com/350/L_JOY66050.jpg',
     price: 4
+}, {
+    name: 'Dipped Cone',
+    image: 'https://media.istockphoto.com/photos/dark-chocolatedipped-waffle-cones-picture-id926010866?s=612x612',
+    price: 5
 }]
 
 const toppings = [{
@@ -30,17 +34,21 @@ const toppings = [{
     name: 'Choclate Chips',
     image: 'https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/chocolate-chips.jpg?quality=82&strip=1&resize=640%2C360',
     price: 2
+},{
+    name: 'Gummy Worms',
+    image: 'https://images.unsplash.com/photo-1499195333224-3ce974eecb47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Z3VtbXklMjB3b3Jtc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
+    price: 3
 }]
 
 
 function drawToppings() {
     let toppingTemplate = ''
     toppings.forEach(topping => toppingTemplate += `
-    <div class="col-4 select-bg text-center p-3 select-item" onclick="orderTopping('${topping.name}')">
+    <div class="col-3 select-bg text-center p-3 select-item" onclick="orderTopping('${topping.name}')">
         <img class="img-fluid"
         src="${topping.image}"
         alt="">
-        <p>${topping.name} - <span>$${topping.price}</span></p>
+        <p class="mb-0 pt-2" >${topping.name} - <span>$${topping.price}</span></p>
     </div>`)
     // console.log(toppingTemplate);
     let toppingsElm = document.getElementById('toppings')
@@ -51,11 +59,11 @@ drawToppings()
 function drawVessels() { 
     let vesselTemplate = ''
     vessels.forEach(vessel => vesselTemplate += `
-    <div class="col-4 select-bg text-center p-3 select-item" onclick="orderVessel('${vessel.name}')">
+    <div class="col-3 select-bg text-center p-3 select-item" onclick="orderVessel('${vessel.name}')">
         <img class="img-fluid"
         src="${vessel.image}"
         alt="">
-        <p>${vessel.name} - <span>$${vessel.price}</span></p>
+        <p class="mb-0 pt-2">${vessel.name} - <span>$${vessel.price}</span></p>
     </div>`)
     let vesselsElm = document.getElementById('vessels')
     vesselsElm.innerHTML = vesselTemplate
@@ -65,11 +73,11 @@ drawVessels()
 function drawIceCream() { 
     let iceCreamTemplate = ''
     iceCream.forEach(iceCream => iceCreamTemplate += `
-    <div class="col-4 select-bg text-center p-3 select-item" onclick="orderIceCream('${iceCream.name}')">
+    <div class="col-3 select-bg text-center p-3 select-item" onclick="orderIceCream('${iceCream.name}')">
         <img class="img-fluid"
         src="${iceCream.image}"
         alt="">
-        <p>${iceCream.name} - <span>$${iceCream.price}</span></p>
+        <p class="mb-0 pt-2">${iceCream.name} - <span>$${iceCream.price}</span></p>
     </div>`)
     let iceCreamElm = document.getElementById('iceCreams')
     iceCreamElm.innerHTML = iceCreamTemplate
@@ -81,8 +89,11 @@ let orders = []
 function drawOrders(){
     let ordersTemplate = ''
     orders.forEach((order, i) => ordersTemplate += `
-    <div class="col-12">
-        <p><span>${order.name}</span> - <span>$${order.price}</span></p>
+    <div class="col-6">
+        <p>${order.name}</p>
+    </div>
+    <div class="col-6 text-center">
+        <p>$${order.price}</p>
     </div>`)
     // console.log(ordersTemplate);
     let orderElm = document.getElementById('order-items')
