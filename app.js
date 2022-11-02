@@ -129,7 +129,7 @@ function drawOrders() {
   orders.forEach(
     (order, i) =>
       (ordersTemplate += `
-      <div class="row">
+      <div class="row order-color">
         <div class="col-4 ">
             <p>${order.name}</p>
         </div>

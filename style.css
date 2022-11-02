@@ -36,6 +36,11 @@ body{
     overflow: scroll;
 }
 
-.set-height{
-    height: 5em !important;
+.order-color:nth-child(even){
+    background-color: lightblue;
+}
+
+p{
+    margin-top: 1em;
+    margin-bottom: 1em;
 }

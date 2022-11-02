@@ -34,14 +34,11 @@
 
   </head>
 
-<!-- TODO do special style in CSS add to index -->
-
-  <body class="">
-    <main class="container-fluid">
+    <body class="container-fluid p-3">
         <div class="row">
             <!-- SECTION Cart Area -->
             <div class="col-md-5">
-                <div class="row bg-white text-primary p-1 mx-3 mt-5 mb-0">
+                <div class="row rounded bg-white text-primary p-1 mx-3 mt-5 mb-0 border-bottom border-5">
                     <div class="col-5">
                         <p class="mb-0 p-2"><b>Name</b></p>
                     </div>
@@ -49,7 +46,7 @@
                         <p class="mb-0 p-2"><b>Qty</b></p>
                     </div>
                     <div class="col-5 text-center">
-                        <p class="mb-0 p-2"><b>Each</b></p>
+                        <p class="mb-0 p-2 ps-5"><b>Each</b></p>
                     </div>
                     <!-- <div class="col-2 text-center">
                         <p class="mb-0 p-2"><b>Total</b></p>
@@ -57,11 +54,7 @@
                 </div>
                 <div class="row bg-white row-style mx-3 mt-0 mb-0">
                     <div class="col-12" id="order-items">
-
-                    </div>
-                    <!-- Order Inject -->
-                    <!-- TODO make inject from top down and have the column stay the same size -->
-                    <!-- TODO also create matching columns for Qty and Total -->
+                        <!-- Order Inject -->
                     <!-- <div class="col-6">
                         <p>Strawberry</p>
                     </div>
@@ -74,10 +67,11 @@
                     <div class="col-2">
                         <p>Total</p>
                     </div> -->
+                    </div>
                 </div>
-                <div class="row bg-white text-end mx-3 mt-0">
-                    <div class="col-12 p-3">TOTAL: $<b><span class="text-primary" id="total"></span></b></div>
-                    <div class="col-12 p-3">
+                <div class="row bg-white mx-3 mt-0">
+                    <div class="offset-8 col-4 p-3 border border-3 border-danger">TOTAL: $<b><span class="text-primary" id="total"></span></b></div>
+                    <div class="col-12 p-3 text-end">
                         <button class="btn btn-primary" onclick="pay()">Pay</button>
                     </div>
                 </div>
@@ -120,7 +114,7 @@
             </div>
         </div>
 
-    </main>
+    </body>
 
 
 
