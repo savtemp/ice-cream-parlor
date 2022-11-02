@@ -35,3 +35,7 @@ body{
     height: 30em !important;
     overflow: scroll;
 }
+
+.set-height{
+    height: 5em !important;
+}
