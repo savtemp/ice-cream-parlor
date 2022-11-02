@@ -181,7 +181,7 @@ function drawTotal() {
 //   quantElm.innerHTML = quantity;
 // }
 
-// TODO add a if statement for quantity that will prevent the items from repeating
+// TODO add a if statement for quantity that will prevent the items from repeating - right now the quantity is drawing the correct number it continues to draw the entire object so you end up with repeats
 
 function orderTopping(selectedTopping) {
   // console.log('ordering topping', selectedTopping)
