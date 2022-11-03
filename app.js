@@ -4,21 +4,21 @@ const iceCream = [
     image:
       "https://celebratingsweets.com/wp-content/uploads/2014/04/Cookie-Dough-Ice-Cream-1-5.jpg",
     price: 1,
-    quantity: null,
+    quantity: 0,
   },
   {
     name: "Vanilla",
     image:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ultimate-vanilla-ice-cream-1628511695.jpg",
     price: 1,
-    quantity: null,
+    quantity: 0,
   },
   {
     name: "Strawberry",
     image:
       "https://www.realfoodwithjessica.com/wp-content/uploads/2017/07/paleostrawberryicecream2.jpg",
     price: 2,
-    quantity: null,
+    quantity: 0,
   },
 ];
 
@@ -27,20 +27,20 @@ const vessels = [
     name: "Waffle Cone",
     image: "https://m.media-amazon.com/images/I/71VNjBMakfL._SL1500_.jpg",
     price: 2,
-    quantity: null,
+    quantity: 0,
   },
   {
     name: "Waffle Bowl",
     image: "http://images.wbmason.com/350/L_JOY66050.jpg",
     price: 4,
-    quantity: null,
+    quantity: 0,
   },
   {
     name: "Dipped Cone",
     image:
       "https://media.istockphoto.com/photos/dark-chocolatedipped-waffle-cones-picture-id926010866?s=612x612",
     price: 5,
-    quantity: null,
+    quantity: 0,
   },
 ];
 
@@ -49,23 +49,96 @@ const toppings = [
     name: "Sprinkles",
     image: "https://upload.wikimedia.org/wikipedia/commons/f/f6/Sprinkles2.jpg",
     price: 1,
-    quantity: null,
+    quantity: 0,
   },
   {
     name: "Chocolate Chips",
     image:
       "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/chocolate-chips.jpg?quality=82&strip=1&resize=640%2C360",
     price: 2,
-    quantity: null,
+    quantity: 0,
   },
   {
     name: "Gummy Worms",
     image:
       "https://images.unsplash.com/photo-1499195333224-3ce974eecb47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Z3VtbXklMjB3b3Jtc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
     price: 3,
-    quantity: null,
+    quantity: 0,
   },
 ];
+
+// NOTE set up for the dictionary
+
+// let cart = {
+// iceCream:[
+//   {
+//     name: "Cookie Dough",
+//     image:
+//       "https://celebratingsweets.com/wp-content/uploads/2014/04/Cookie-Dough-Ice-Cream-1-5.jpg",
+//     price: 1,
+//     quantity: null,
+//   },
+//   {
+//     name: "Vanilla",
+//     image:
+//       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ultimate-vanilla-ice-cream-1628511695.jpg",
+//     price: 1,
+//     quantity: null,
+//   },
+//   {
+//     name: "Strawberry",
+//     image:
+//       "https://www.realfoodwithjessica.com/wp-content/uploads/2017/07/paleostrawberryicecream2.jpg",
+//     price: 2,
+//     quantity: null,
+//   },
+// ],
+
+// vessels:[
+//   {
+//     name: "Waffle Cone",
+//     image: "https://m.media-amazon.com/images/I/71VNjBMakfL._SL1500_.jpg",
+//     price: 2,
+//     quantity: null,
+//   },
+//   {
+//     name: "Waffle Bowl",
+//     image: "http://images.wbmason.com/350/L_JOY66050.jpg",
+//     price: 4,
+//     quantity: null,
+//   },
+//   {
+//     name: "Dipped Cone",
+//     image:
+//       "https://media.istockphoto.com/photos/dark-chocolatedipped-waffle-cones-picture-id926010866?s=612x612",
+//     price: 5,
+//     quantity: null,
+//   },
+// ],
+
+// toppings:[
+//   {
+//     name: "Sprinkles",
+//     image: "https://upload.wikimedia.org/wikipedia/commons/f/f6/Sprinkles2.jpg",
+//     price: 1,
+//     quantity: null,
+//   },
+//   {
+//     name: "Chocolate Chips",
+//     image:
+//       "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/chocolate-chips.jpg?quality=82&strip=1&resize=640%2C360",
+//     price: 2,
+//     quantity: null,
+//   },
+//   {
+//     name: "Gummy Worms",
+//     image:
+//       "https://images.unsplash.com/photo-1499195333224-3ce974eecb47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Z3VtbXklMjB3b3Jtc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+//     price: 3,
+//     quantity: null,
+//   },
+// ],
+// }
 
 function drawToppings() {
   let toppingTemplate = "";
@@ -85,6 +158,23 @@ function drawToppings() {
   toppingsElm.innerHTML = toppingTemplate;
 }
 drawToppings();
+
+// NOTE this is how we would draw the items if we wanted to pull from the dictionary - this would prevent us from having to create 3 separate functions to draw each thing
+
+// function drawStore(){
+//   for(const key in cart){
+//     let items = cart[key]
+//     let template = ''
+//     items.forEach(item => template += `
+//     <div class="col-3 select-bg text-center p-3 select-item" onclick="orderTopping('${item.name}')">
+//         <img class="img-fluid"
+//         src="${item.image}"
+//         alt="">
+//         <p class="mb-0 pt-2" >${item.name} - <span>$${item.price}</span></p>
+//     </div>
+//     `)
+//   }
+// }
 
 function drawVessels() {
   let vesselTemplate = "";
@@ -162,6 +252,59 @@ function drawOrders() {
   //   drawQuantity();
 }
 
+// NOTE we potentially would need to draw each order item because it is iterating through its own array (if we put these in a dictionary then we could use just one function)
+// function drawIceCreamOrder() {
+//   let template = "";
+//   iceCream.forEach((i) => {
+//     if (i.quantity > 0) {
+//       console.log("drawing cart", i);
+//       template += `
+//       <div class="row order-color">
+//         <div class="col-4 ">
+//             <p>${i.name}</p>
+//         </div>
+//         <div class="col-4 text-center" id="quantity">
+//             <p>${i.quantity}</p>
+//         </div>
+//         <div class="col-4  text-center">
+//             <p>$${i.price}</p>
+//         </div>
+//       </div>
+//       `;
+//     }
+//     // @ts-ignore
+//     document.getElementById("iceCreamOrder").innerHTML = template;
+//     drawTotal();
+//   });
+// }
+
+// NOTE function to draw cart if you were using a dictionary
+// FIXME this will need an if statement to adjust quantity
+// function drawCart() {
+//   for (const key in cart) {
+//     let orderedItems = cart[key];
+//     let template = "";
+//     orderedItems.forEach(
+//       (oi) =>
+//         (template += `
+//     <div class="row order-color">
+//         <div class="col-4 ">
+//             <p>${oi.name}</p>
+//         </div>
+//         <div class="col-4 text-center" id="quantity">
+//             <p>${oi.quantity}</p>
+//         </div>
+//         <div class="col-4  text-center">
+//             <p>$${oi.price}</p>
+//         </div>
+//       </div>
+//     `)
+//     );
+//     // @ts-ignore
+//     document.getElementById("cart").innerHTML = template;
+//   }
+// }
+
 function drawTotal() {
   let subtotal = 0;
   orders.forEach((order) => (subtotal += order.price));
@@ -182,7 +325,6 @@ function drawTotal() {
 // }
 
 // TODO add a if statement for quantity that will prevent the items from repeating - right now the quantity is drawing the correct number it continues to draw the entire object so you end up with repeats
-
 function orderTopping(selectedTopping) {
   // console.log('ordering topping', selectedTopping)
   let foundTopping = toppings.find(
